@@ -13,7 +13,12 @@
 	<div class="panel-body">
 	<%=r.input :title, input_html: {class: 'form-control'}%>
 	<%=r.input :description, input_html: {class: 'form-control'}%>
+	
 	<%=r.input :image, input_html: {class: 'form-control'}%>
+	<% if r.object.image? %>
+	<%= r.label :remove_image %>
+      <%= r.check_box :remove_image %> 
+    <% end %>
 	<%=r.button :submit, class: "btn btn-primary"%>
 	<%end%>
 </div>

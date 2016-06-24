@@ -1,13 +1,13 @@
 
  
-<h1><%=@recipe.title%></h1>
+
+ 
+
+
+  <%= image_tag @recipe.image.image.url, class: "recipe_image" %>
+
+ <h1><%=@recipe.title%></h1>
 <p><%=@recipe.description%>
- 
-<p>
-	
-  <%= image_tag @recipe.image.image.url %>
-</p>
- 
 
 <p><%=link_to "Edit", edit_recipe_path, class: "btn btn-default"%>
 <%=link_to "Delete", recipe_path, method: :delete, data: {confirm: "sure"}, class: "btn btn-danger"%>
