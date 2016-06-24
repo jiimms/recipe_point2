@@ -1,2 +1,8 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h1>Recipes</h1>
+
+<%@recipes.each do |recipe|%>
+<h2><%=link_to recipe.title, recipe%></h2>
+
+<%end%>
+
+<%=link_to "New Recipe", new_recipe_path, class: "btn btn-default"%>

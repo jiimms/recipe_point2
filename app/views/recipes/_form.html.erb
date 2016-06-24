@@ -1,0 +1,20 @@
+
+
+<%=simple_form_for @recipe, html: {mutipart: true} do |r|%>
+<%if @recipe.errors.any?%>
+<p><%=@recipe.errors.count%> prevented this recipe from saving</p>
+<%end%>
+<ul>
+<%@recipe.errors.full_messages.each do |msg|%>
+	<li><%= msg%></li>
+</ul>
+<%end%>
+<div class= "panel panel-default">
+	<div class="panel-body">
+	<%=r.input :title, input_html: {class: 'form-control'}%>
+	<%=r.input :description, input_html: {class: 'form-control'}%>
+	<%=r.input :image, input_html: {class: 'form-control'}%>
+	<%=r.button :submit, class: "btn btn-primary"%>
+	<%end%>
+</div>
+</div>
