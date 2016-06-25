@@ -1,13 +1,16 @@
 
- 
-
- 
-
-
-  <%= image_tag @recipe.image.image.url, class: "recipe_image" %>
-
- <h1><%=@recipe.title%></h1>
-<p><%=@recipe.description%>
+ <div class ="main_content">
+ 	<div id = "recipe_top" class ="row">
+ 		<div class= "col-md-4">
+ 			<%= image_tag @recipe.image.image.url, class: "recipe_image" %>
+ 		</div>
+ 		<div class = "col-md-8">
+ 			<div id = "recipe_info">
+ 			<h1><%=@recipe.title%></h1>
+			<p><%=@recipe.description%>
+			</div>
+		</div>
+	</div>
 
 	<div class= "row">
 		<div class ="col col-md-6">

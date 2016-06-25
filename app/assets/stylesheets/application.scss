@@ -81,7 +81,7 @@ body {
 #recipe_info, #ingredients, #directions {
 	background: white;
 	@include box-shadow;
-	min-height: 360px;
+	min-height: 250px;
 	border-radius: 5px;
 	padding: 2em 8%;
 }
