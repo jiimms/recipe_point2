@@ -8,9 +8,31 @@
 
  <h1><%=@recipe.title%></h1>
 <p><%=@recipe.description%>
-	<p><%@recipe.ingredients.each do |i|%>
-		<p><%= i.name%><p>
-		<%end%>
+
+	<div class= "row">
+		<div class ="col col-md-6">
+			<div id = "ingredients">
+				<p>Ingredients</p>
+				<ul>
+					<%@recipe.ingredients.each do |i|%>
+					<li><%= i.name%></li>
+					<%end%>
+				</ul>
+			</div>
+		</div>
+
+	<div class ="col col-md-6">
+		<div id = "directions">
+			<p>Steps</p>
+			<ol>
+				<%@recipe.directions.each do |d|%>
+					<li><%= d.steps%></li>
+				<%end%>
+			</ol>
+		</div>
+	</div>
+</div>
+
 
 <p><%=link_to "Edit", edit_recipe_path, class: "btn btn-default"%>
 <%=link_to "Delete", recipe_path, method: :delete, data: {confirm: "sure"}, class: "btn btn-danger"%>
