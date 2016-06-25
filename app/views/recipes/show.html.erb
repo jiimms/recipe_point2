@@ -8,6 +8,9 @@
 
  <h1><%=@recipe.title%></h1>
 <p><%=@recipe.description%>
+	<p><%@recipe.ingredients.each do |i|%>
+		<p><%= i.name%><p>
+		<%end%>
 
 <p><%=link_to "Edit", edit_recipe_path, class: "btn btn-default"%>
 <%=link_to "Delete", recipe_path, method: :delete, data: {confirm: "sure"}, class: "btn btn-danger"%>
